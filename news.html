@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>每日一闻 - 子曰学习资源共享网</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--jQuery-->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/script.js" type="text/javascript"></script> -->
+    <!--登陆注册面板-->
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body class="body-news">
+<!--登陆注册面板-->
+<div class="login-panel-inner">
+    <ul class="login-panel-nav">
+        <li class="login-nav-item on">注册</li>
+        <li class="login-nav-item">登陆</li>
+    </ul>
+    <div class="clear"></div>
+    <div class="login-panel panel-reg active">
+        <form id="form-reg" method="post">
+            <label><span>*</span>邮箱:</label>
+            <input type="email" name="email" required="required" />
+            <label><span>*</span>密码:</label>
+            <input type="password" name="password" required="required" id="form-password-1"/>
+            <label><span>*</span>确认密码:</label>
+            <input type="password" name="re-password" onchange="checkPassword()" required="required" id="form-password-2"/>
+            <div class="form-tip" id="form-tip-pw"></div>
+            <input type="submit" value="点击注册" id="form-reg-submit"/>
+            <span>已有账号?</span><a href="#" id="link-login">立即登陆</a>
+        </form>
+    </div>
+    <div class="login-panel panel-login">
+        <form id="form-login" method="post">
+            <label>邮箱:</label>
+            <input type="email" name="email" placeholder="邮箱" required="required"/>
+            <label>密码:</label>
+            <input type="password" name="password" placeholder="密码" required="required" />
+            <input type="submit" value="立即登陆" id="form-login-submit" />
+            <a href="#" >忘记密码?</a>
+        </form>
+    </div>
+    <div class="login-close"><a href="#"> <i class="fa fa-times fa-lg" aria-hidden="true"></i></a></div>
+</div>
+<div class="login-panel-wrapp">
+</div>
+<!--头部导航-->
+<div class="header fixed">
+    <div class="header-inner">
+        <div class="top-logo fl"><a href="#">Confusay</a></div>
+        <ul class="top-nav fl">
+            <li class="nav-home"><a href="index.html">首页</a></li>
+            <li class="nav-faq"><a href="faq.html">答疑解惑</a></li>
+            <li class="nav-plan"><a href="plan.html">精品课程</a></li>
+            <li class="nav-download"><a href="download.html">资源下载</a></li>
+            <li class="nav-share"><a href="share.html">我要共享</a></li>
+        </ul>
+        <!--导航条登陆注册-->
+        <ul class="top-nav-login fr">
+            <li id="js-nav-reg">注册</li>
+            <li id="js-nav-log">登陆</li>
+        </ul>
+        <!--登陆成功后-->
+        <div class="login-info fr hidden">
+            <div class="login-info-avatar fl"><img src="images/avatar.jpg" height="30" width="30" /> </div>
+            <div class="login-info-user fl">admin</div>
+        </div>
+        <!--搜索-->
+        <div class="top-search fr">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" name="search" class="search_ipt" placeholder="输入要搜索的内容" />
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--模块-->
+<div class="wrapper">
+    <!--第一块内容-->
+    <div class="wrapper_top"></div>
+  <div class="wrapper_content">
+   	<h2>每日一闻</h2>
+        <ul>
+            <li>
+                <div class="li_in">
+                    <div class="li_in_l">
+                        <span>28</span><br/>
+                        <p>2016年04月</p>
+                        <p>星期四</p>
+                    </div>
+                    <div class="li_in_r">
+                        <h3>RxSwift给Swift带来了原生Reactive编程的功能</h3>
+                        <p>RxSwift尝试尽可能地与ReactiveX.io和它的文档相一致，它可以通过CocoaPods、Carthage或直接通过GitHub进行安装。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="li_in">
+                    <div class="li_in_l">
+                        <span>27</span><br/>
+                        <p>2016年04月</p>
+                        <p>星期三</p>
+                    </div>
+                    <div class="li_in_r">
+                        <h3>PHP对战Node.js：一场关于开发者喜好的史诗级战役</h3>
+                        <p>整个故事正如好莱坞大片的经典剧情走向：两位昔日好友如今分道扬镳，甚至被迫陷入了你死我活的斗争当中。刚开始的分歧并不严重，无非是一位老友对于另一位伙伴长久以来占据、但又绝口不提的业务领域产生了点兴趣。 啊实打实大师大声大声</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="li_in">
+                    <div class="li_in_l">
+                        <span>26</span><br/>
+                        <p>2016年04月</p>
+                        <p>星期二</p>
+                    </div>
+                    <div class="li_in_r">
+                        <h3>中国首届AR/VR技术大会开幕：虚拟技术撼动现实</h3>
+                        <p>2016年4月22日，由51CTO主办的中国首届VR/AR技术大会在北京骏马国际酒店举办。本次大会以“趋势 创意 技术”为主题，邀请国内VR领域顶级先行者，探索市场热度下的前沿趋势，旨在推进国内VR/AR市场的技术与应用创新。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="li_in">
+                    <div class="li_in_l">
+                        <span>25</span><br/>
+                        <p>2016年04月</p>
+                        <p>星期一</p>
+                    </div>
+                    <div class="li_in_r">
+                        <h3>大咖话数据：技术热潮下的应用场景冷思考</h3>
+                        <p>大数据热潮虽潮席卷已久，技术支撑困难、创新能力不足、专业人才缺乏等种种仍是大数据落地于企业实际应用的绊脚石。近日，51 CTO携手IBM,与典型的传统企业及一线互联网公司的技术专家汇聚一堂。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="li_in">
+                    <div class="li_in_l">
+                        <span>24</span><br/>
+                        <p>2016年04月</p>
+                        <p>星期日</p>
+                    </div>
+                    <div class="li_in_r">
+                        <h3>H5发展现状：2015年将有80%的App基于HTML5</h3>
+                        <p>截至2015，有80%的App将全部或部分基于HTML5。这意味着大部分App的内容都将是以网页的形式呈现。各大主流社交平台对H5分享的支持都是比较友好的，只不过每个平台的分享接口都需要单独的定制。</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="wenda-content-page">
+        <a href="news.html" class="disabled">首页</a>
+        <a href="news.html" class="disabled">上一页</a>
+        <a href="news.html" class="active">1</a>
+        <a href="news_1.html" class="">2</a>
+        <a href="news_1.html" >下一页</a>
+        <a href="news_1.html" >尾页</a>
+    </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-left fl">
+            <p><a href="subject.html">课程资源</a>|<a href="news.html">每日一闻</a>|<a href="mailto:admin@52admin.net">联系我们</a>|<a
+                    href="http://www.confusay.com" target="_blank">子曰工作室</a></p>
+            <p>Copyright © 2016 Confusay. All Rights Reserved</p>
+        </div>
+        <div class="footer-right fr">
+            <img src="images/confusay_foot.png" height="100" width="100" class="confusay-team"/>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="backtop"></div>
+</body>
+</html>

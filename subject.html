@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>子曰自主学习网</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--jQuery-->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/script.js" type="text/javascript"></script> -->
+    <!--登陆注册面板-->
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body class="body-subject">
+<!--登陆注册面板-->
+<div class="login-panel-inner">
+    <ul class="login-panel-nav">
+        <li class="login-nav-item on">注册</li>
+        <li class="login-nav-item">登陆</li>
+    </ul>
+    <div class="clear"></div>
+    <div class="login-panel panel-reg active">
+        <form id="form-reg" method="post">
+            <label><span>*</span>邮箱:</label>
+            <input type="email" name="email" required="required" />
+            <label><span>*</span>密码:</label>
+            <input type="password" name="password" required="required" id="form-password-1"/>
+            <label><span>*</span>确认密码:</label>
+            <input type="password" name="re-password" onchange="checkPassword()" required="required" id="form-password-2"/>
+            <div class="form-tip" id="form-tip-pw"></div>
+            <input type="submit" value="点击注册" id="form-reg-submit"/>
+            <span>已有账号?</span><a href="#" id="link-login">立即登陆</a>
+        </form>
+    </div>
+    <div class="login-panel panel-login">
+        <form id="form-login" method="post">
+            <label>邮箱:</label>
+            <input type="email" name="email" placeholder="邮箱" required="required"/>
+            <label>密码:</label>
+            <input type="password" name="password" placeholder="密码" required="required" />
+            <input type="submit" value="立即登陆" id="form-login-submit" />
+            <a href="#" >忘记密码?</a>
+        </form>
+    </div>
+    <div class="login-close"><a href="#"> <i class="fa fa-times fa-lg" aria-hidden="true"></i></a></div>
+</div>
+<div class="login-panel-wrapp">
+</div>
+<!--头部导航-->
+<div class="header fixed">
+    <div class="header-inner">
+        <div class="top-logo fl"><a href="#">Confusay</a></div>
+        <ul class="top-nav fl">
+            <li class="nav-home"><a href="index.html">首页</a></li>
+            <li class="nav-faq"><a href="faq.html">答疑解惑</a></li>
+            <li class="nav-plan"><a href="plan.html">精品课程</a></li>
+            <li class="nav-download"><a href="download.html">资源下载</a></li>
+            <li class="nav-share"><a href="share.html">我要共享</a></li>
+        </ul>
+        <!--导航条登陆注册-->
+        <ul class="top-nav-login fr">
+            <li id="js-nav-reg">注册</li>
+            <li id="js-nav-log">登陆</li>
+        </ul>
+        <!--登陆成功后-->
+        <div class="login-info fr hidden">
+            <div class="login-info-avatar fl"><img src="images/avatar.jpg" height="30" width="30" /> </div>
+            <div class="login-info-user fl">admin</div>
+        </div>
+        <!--搜索-->
+        <div class="top-search fr">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" name="search" class="search_ipt" placeholder="输入要搜索的内容" />
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--模块-->
+<div class="wrapper">
+    <!--第一块内容-->
+    <div class="container">
+        <!--以下是内容区域 -->
+        <div class="side fl">
+            <div class="class_all"><a href="subject.html" >全部课程</a></div>
+            <dl class="class_all_one">
+                <dt>前端</dt>
+                <dd><a href="subject/subject_html.html">HTML</a></dd>
+                <dd><a href="subject/subject_css.html">CSS</a></dd>
+                <dd><a href="subject/subject_js.html">JavaScript</a></dd>
+            </dl>
+            <dl class="class_all_two">
+                <dt>后端</dt>
+                <dd><a href="subject/subject_php.html">PHP</a></dd>
+                <dd><a href="subject/subject_java.html">Java</a></dd>
+            </dl>
+        </div>
+        <div class="side_right fr">
+        <ul>
+            <li><a href="video/video_html.html?index=0">
+                <img src="images/html_1.jpg" height="135" width="240">
+                <h4>第1章 HTML5概述</h4>
+                <p>本套课程介绍 HTML5 以及开发前需要准备的环境</p>
+            </a></li>
+            <li><a href="video/video_html.html?index=1">
+                <img src="images/html_2.jpg" height="135" width="240">
+                <h4>第2章 基本格式</h4>
+                <p>主要讲解HTML5 的基本格式</p>
+            </a></li>
+            <li><a href="video/video_html.html?index=2">
+                <img src="images/html_3.jpg" height="135" width="240">
+                <h4>第3章 文本元素</h4>
+                <p>本套课程主要讲解 HTML5 元素、属性和格式化</p>
+            </a></li>
+            <li><a href="video/video_html.html?index=3">
+                <img src="images/html_4.jpg" height="135" width="240">
+                <h4>第4章 超链接和路径</h4>
+                <p>本套课程主要讲解 HTML5 样式、链接和表格</p>
+            </a></li>
+            <li><a href="video/video_html.html?index=4">
+                <img src="images/html_5.jpg" height="135" width="240">
+                <h4>第5章 分组元素</h4>
+                <p>本课讲解HTML5列表的应用和块元素的认识以及布局的创建。</p>
+            </a></li>
+            <li><a href="video/video_css.html?index=0">
+                <img src="images/css_1.jpg" height="135" width="240">
+                <h4>CSS入门基础知识</h4>
+                <p>本课讲解CSS语法，并掌握基本选择器的使用。</p>
+            </a></li>
+            <li><a href="video/video_css.html?index=1">
+                <img src="images/css_2.jpg" height="135" width="240">
+                <h4>CSS基本样式讲解</h4>
+                <p>本课主要讲解CSS的样式，让学生掌握基本的样式的处理</p>
+            </a></li>
+            <li><a href="video/video_css.html?index=2">
+                <img src="images/css_3.jpg" height="135" width="240">
+                <h4>CSS基本样式讲解</h4>
+                <p>本课主要讲解盒子模型，让学生掌握内外边距的使用及盒子模型的设计。</p>
+            </a></li>
+            <li><a href="video/video_css.html?index=3">
+                <img src="images/css_4.jpg" height="135" width="240">
+                <h4>CSS定位</h4>
+                <p>本课主要讲解CSS定位，让学员掌握位置的设置以及通过浮动更好的布局。</p>
+            </a></li>
+            <li><a href="video/video_java.html?index=0">
+                <img src="images/java_1.jpg" height="135" width="240">
+                <h4>Java语言简介</h4>
+                <p>介绍Java 编程语言</p>
+            </a></li>
+            <li><a href="video/video_java.html?index=1">
+                <img src="images/java_2.jpg" height="135" width="240">
+                <h4>Java开发环境搭建</h4>
+                <p>Java开发环境搭建及Eclipse的下载与安装</p>
+            </a></li>
+            <li><a href="video/video_java.html?index=2">
+                <img src="images/java_3.jpg" height="135" width="240">
+                <h4>变量与数据类型</h4>
+                <p>学习变量的命名、定义和初始化及整数、浮点、字符数据类型</p>
+            </a></li>
+        </ul>
+            <div class="wenda-content-page">
+                <a href="#" class="disabled">首页</a>
+                <a href="#" class="disabled">上一页</a>
+                <a href="subject.html" class="active">1</a>
+                <a href="subject_1.html" >2</a>
+                <a href="subject_2.html" >3</a>
+                <a href="subject_1.html" >下一页</a>
+                <a href="subject_2.html" >尾页</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-left fl">
+            <p><a href="subject.html">课程资源</a>|<a href="news.html">每日一闻</a>|<a href="mailto:admin@52admin.net">联系我们</a>|<a href="http://www.confusay.com" target="_blank">子曰工作室</a> </p>
+            <p>Copyright © 2016 Confusay. All Rights Reserved</p>
+        </div>
+        <div class="footer-right fr">
+            <img src="images/confusay_foot.png" height="100" width="100" class="confusay-team" />
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="backtop"></div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PHP开发课程资源 - 子曰学习资源共享网</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <!--登陆注册,返回顶部-->
+    <script src="../js/main.js" type="text/javascript"></script>
+</head>
+<body class="body-plan">
+<!--登陆注册面板-->
+<div class="login-panel-inner">
+    <ul class="login-panel-nav">
+        <li class="login-nav-item on">注册</li>
+        <li class="login-nav-item">登陆</li>
+    </ul>
+    <div class="clear"></div>
+    <div class="login-panel panel-reg active">
+        <form id="form-reg" method="post">
+            <label><span>*</span>邮箱:</label>
+            <input type="email" name="email" required="required" />
+            <label><span>*</span>密码:</label>
+            <input type="password" name="password" required="required" id="form-password-1"/>
+            <label><span>*</span>确认密码:</label>
+            <input type="password" name="re-password" onchange="checkPassword()" required="required" id="form-password-2"/>
+            <div class="form-tip" id="form-tip-pw"></div>
+            <input type="submit" value="点击注册" id="form-reg-submit"/>
+            <span>已有账号?</span><a href="#" id="link-login">立即登陆</a>
+        </form>
+    </div>
+    <div class="login-panel panel-login">
+        <form id="form-login" method="post">
+            <label>邮箱:</label>
+            <input type="email" name="email" placeholder="邮箱" required="required"/>
+            <label>密码:</label>
+            <input type="password" name="password" required="required" placeholder="密码"/>
+            <input type="submit" value="立即登陆" id="form-login-submit" />
+            <a href="#" >忘记密码?</a>
+        </form>
+    </div>
+    <div class="login-close"><a href="#"> <i class="fa fa-times fa-lg" aria-hidden="true"></i></a></div>
+</div>
+<div class="login-panel-wrapp">
+</div>
+<!--头部导航-->
+<div class="header fixed">
+    <div class="header-inner">
+        <div class="top-logo fl"><a href="#">Confusay</a></div>
+        <ul class="top-nav fl">
+            <li class="nav-home"><a href="../index.html">首页</a></li>
+            <li class="nav-faq"><a href="../faq.html">答疑解惑</a></li>
+            <li class="nav-plan"><a href="../plan.html">精品课程</a></li>
+            <li class="nav-download"><a href="../download.html">资源下载</a></li>
+            <li class="nav-share"><a href="../share.html">我要共享</a></li>
+        </ul>
+        <!--导航条登陆注册-->
+        <ul class="top-nav-login fr">
+            <li id="js-nav-reg">注册</li>
+            <li id="js-nav-log">登陆</li>
+        </ul>
+        <!--登陆成功后-->
+        <div class="login-info fr hidden">
+            <div class="login-info-avatar fl"><img src="../images/avatar.jpg" height="30" width="30" /> </div>
+            <div class="login-info-user fl">admin</div>
+        </div>
+        <!--搜索-->
+        <div class="top-search fr">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" name="search" class="search_ipt" placeholder="输入要搜索的内容" />
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--模块-->
+<div class="wrapper">
+    <!--第一块内容-->
+    <div class="container plan">
+        <!--以下是内容区域 -->
+        <div class="plan-name">
+            <!--计划logo标志-->
+            <img src="../images/php-ico.png" />
+            <h3>PHP开发课程资源</h3>
+            <p>最好的开发语言，没有之一，跨平台、性能优越、高效率，互联网产品必备语言</p>
+        </div>
+        <div class="plan-content-inner">
+            <!--课程步骤标题及描述-->
+            <div class="plan-level">
+                <h3>1. PHP基础知识</h3>
+                <p>PHP 是英文超文本预处理语言（Hypertext Preprocessor）的缩写，它是一种在服务器端执行的嵌入 HTML 文档的脚本语言，语言的风格有类似于C语言，被广泛应用于动态网站开发。</p>
+            </div>
+            <!--课程项目-->
+            <ul class="plan-list">
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_1.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=0"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>PHP 基本介绍</h3>
+                        <span class="plan-span">共17分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc">PHP 语法简单，开发效率高</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_2.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=1"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>PHP 开发环境搭建</h3>
+                        <span class="plan-span">共17分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc">如何在 Windows、Linux、OSX 系统下搭建 PHP</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_3.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=2"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>PHP 语法基础</h3>
+                        <span class="plan-span">共28分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc"> PHP 语言的基本语法</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_4.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=3"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>部署 PHP 代码</h3>
+                        <span class="plan-span">共18分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc">如何部署 PHP 代码，内容包括将 PHP 部署到独立主机上</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_5.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=4"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>PHP 常用功能</h3>
+                        <span class="plan-span">共30分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc">PHP 常用的功能，包括使用字符串、使用数组、包含 PHP 文件</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--箭头-->
+        <div class="plan-pagenext">
+            <img src="../images/next_eaadfa6.png"/>
+        </div>
+        <div class="plan-content-inner">
+            <div class="plan-level">
+                <h3>2. thinkPHP 框架详解</h3>
+                <p>ThinkPHP 是一个免费开源的，快速、简单的面向对象的 轻量级 PHP 开发框架 ，创立于2006年初，遵循 Apache2 开源协议发布，是为了敏捷 WEB 应用开发和简化企业应用开发而诞生的。ThinkPHP 作为一款国产的 WEB 应用开发框架，在国内有着众多的应用案例。</p>
+            </div>
+            <ul class="plan-list">
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_6.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=5"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>ThinkPHP 概述及配置</h3>
+                        <span class="plan-span">共22分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc">了解 ThinkPHP 应用的程序结构</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_7.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=6"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>ThinkPHP 控制器</h3>
+                        <span class="plan-span">共17分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc">熟悉 ThinkPHP 框架的控制器，学会控制器类和其操作方法的定义并调用</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="plan-list-img">
+                        <img src="../images/php_8.jpg" height="135" width="240">
+                        <div class="plan-list-play"><a href="../video/video_php.html?index=7"></a></div>
+                    </div>
+                    <div class="plan-list-info">
+                        <h3>ThinkPHP 视图</h3>
+                        <span class="plan-span">共22分钟</span> <span class="plan-span">PHP</span>
+                        <div class="plan-desc">对 ThinkPHP 框架视图有基本的认识, 应用视图的结构、赋值、渲染和主题</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="plan-pagenext">
+            <img src="../images/next_eaadfa6.png"/>
+            <h3>不断完善中...</h3>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-left fl">
+            <p><a href="subject.html">课程资源</a>|<a href="news.html">每日一闻</a>|<a href="mailto:admin@52admin.net">联系我们</a>|<a href="http://www.confusay.com" target="_blank">子曰工作室</a> </p>
+            <p>Copyright © 2016 Confusay. All Rights Reserved</p>
+        </div>
+        <div class="footer-right fr">
+            <img src="../images/confusay_foot.png" height="100" width="100" class="confusay-team" />
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="backtop"></div>
+</body>
+</html>

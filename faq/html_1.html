@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML &lt;a&gt; download 属性的疑问</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/faq.js" type="text/javascript"></script>
+    <!--登陆注册,返回顶部-->
+    <script src="../js/main.js" type="text/javascript"></script>
+</head>
+<body class="body-faq">
+<!--登陆注册面板-->
+<div class="login-panel-inner">
+    <ul class="login-panel-nav">
+        <li class="login-nav-item on">注册</li>
+        <li class="login-nav-item">登陆</li>
+    </ul>
+    <div class="clear"></div>
+    <div class="login-panel panel-reg active">
+        <form id="form-reg" method="post">
+            <label><span>*</span>邮箱:</label>
+            <input type="email" name="email" required="required" />
+            <label><span>*</span>密码:</label>
+            <input type="password" name="password" required="required" id="form-password-1"/>
+            <label><span>*</span>确认密码:</label>
+            <input type="password" name="re-password" onchange="checkPassword()" required="required" id="form-password-2"/>
+            <div class="form-tip" id="form-tip-pw"></div>
+            <input type="submit" value="点击注册" id="form-reg-submit"/>
+            <span>已有账号?</span><a href="#" id="link-login">立即登陆</a>
+        </form>
+    </div>
+    <div class="login-panel panel-login">
+        <form id="form-login" method="post">
+            <label>邮箱:</label>
+            <input type="email" name="email" placeholder="邮箱" required="required"/>
+            <label>密码:</label>
+            <input type="password" name="password" required="required" placeholder="密码"/>
+            <input type="submit" value="立即登陆" id="form-login-submit" />
+            <a href="#" >忘记密码?</a>
+        </form>
+    </div>
+    <div class="login-close"><a href="#"> <i class="fa fa-times fa-lg" aria-hidden="true"></i></a></div>
+</div>
+<div class="login-panel-wrapp">
+</div>
+<!--头部导航-->
+<div class="header fixed">
+    <div class="header-inner">
+        <div class="top-logo fl"><a href="#">Confusay</a></div>
+        <ul class="top-nav fl">
+            <li class="nav-home"><a href="../index.html">首页</a></li>
+            <li class="nav-faq"><a href="../faq.html">答疑解惑</a></li>
+            <li class="nav-plan"><a href="../plan.html">精品课程</a></li>
+            <li class="nav-download"><a href="../download.html">资源下载</a></li>
+            <li class="nav-share"><a href="../share.html">我要共享</a></li>
+        </ul>
+        <!--导航条登陆注册-->
+        <ul class="top-nav-login fr">
+            <li id="js-nav-reg">注册</li>
+            <li id="js-nav-log">登陆</li>
+        </ul>
+        <!--登陆成功后-->
+        <div class="login-info fr hidden">
+            <div class="login-info-avatar fl"><img src="../images/avatar.jpg" height="30" width="30" /> </div>
+            <div class="login-info-user fl">admin</div>
+        </div>
+        <!--搜索-->
+        <div class="top-search fr">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" name="search" class="search_ipt" placeholder="输入要搜索的内容" />
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--模块-->
+<div class="wrapper">
+    <!--第一块内容-->
+    <div class="container wenda">
+        <!--当前位置导航-->
+        <div class="current-nav">
+            <i class="fa fa-home fa-fw" aria-hidden="true"></i>
+            <a href="../index.html">首页</a> <span>»</span> <a href="../faq.html">答疑解惑</a> <span>»</span> 当前问题
+        </div>
+        <!--以下是内容区域 -->
+        <div class="wenda-slider fl">
+            <div class="wenda-question-btn"><a href="../faq.html#qa-submit">我要提问</a> </div>
+            <div class="wenda-slider-wenti">
+                <h3>热门问题</h3>
+                <ul>
+                    <li>
+                        <div class="wenda-wenti-title" ><a href="../faq/php_2.html">关于&lt;？php echo ?&gt;编写</a></div>
+                        <div class="wenda-wenti-info">回答:4 <span class="fr">来自 PHP</span></div>
+                    </li>
+                    <li>
+                        <div class="wenda-wenti-title" ><a href="../faq/css_1.html">CSS的浮动问题</a></div>
+                        <div class="wenda-wenti-info">回答:3 <span class="fr">来自 CSS</span></div>
+                    </li>
+                    <li>
+                        <div class="wenda-wenti-title" ><a href="../faq/js_1.html">为什么没显示结果？求救大神js</a></div>
+                        <div class="wenda-wenti-info">回答:3 <span class="fr">来自 JavaScript</span></div>
+                    </li>
+                    <li>
+                        <div class="wenda-wenti-title" ><a href="../faq/html_1.html">HTML &lt;a&gt; download 属性的疑问</a></div>
+                        <div class="wenda-wenti-info">回答:2 <span class="fr">来自 HTML</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="wenda-slider-fenlei">
+                <h3>分类目录</h3>
+                <ul>
+                    <li>
+                        <div class="wenda-tag-img html-img fl"></div>
+                        <div class="wenda-fenlei-info fl">
+                            <div class="wenda-fenlei-title">HTML</div>
+                            <div class="wenda-fenlei-title-info">问题数:2</div>
+                        </div>
+                        <div class="wenda-fenlei-btn fr">
+                            <a href="../faq/faq_html.html">进入</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wenda-tag-img css-img fl"></div>
+                        <div class="wenda-fenlei-info fl">
+                            <div class="wenda-fenlei-title">CSS</div>
+                            <div class="wenda-fenlei-title-info">问题数:2</div>
+                        </div>
+                        <div class="wenda-fenlei-btn fr">
+                            <a href="../faq/faq_css.html">进入</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wenda-tag-img js-img fl"></div>
+                        <div class="wenda-fenlei-info fl">
+                            <div class="wenda-fenlei-title">JavaScript</div>
+                            <div class="wenda-fenlei-title-info">问题数:2</div>
+                        </div>
+                        <div class="wenda-fenlei-btn fr">
+                            <a href="../faq/faq_js.html">进入</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wenda-tag-img php-img fl"></div>
+                        <div class="wenda-fenlei-info fl">
+                            <div class="wenda-fenlei-title">PHP</div>
+                            <div class="wenda-fenlei-title-info">问题数:2</div>
+                        </div>
+                        <div class="wenda-fenlei-btn fr">
+                            <a href="../faq/faq_php.html">进入</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wenda-content fr">
+            <div class="wenda-content-question">
+                <h3>HTML &lt;a&gt; download 属性的疑问</h3>
+                <div class="wenda-question-content">
+                    <p>写了个页面,通过&lt;a&gt; download 属性下载一个图片.</p><p>如下:<br /></p><p>&lt;!DOCTYPE html&gt;</p><p>&lt;html&gt;</p><p>&lt;body&gt;</p><p><span>&lt;p&gt;点击下载该图片：&lt;p&gt;</span><br /></p><p><br /></p><p>&lt;a href="https://img.alicdn.com/tps/TB1DzMEMpXXXXanXVXXXXXXXXXX-480-180.png" download="w3logo"&gt;</p><p>&lt;img border="0" src="https://img.alicdn.com/tps/TB1DzMEMpXXXXanXVXXXXXXXXXX-480-180.png" alt="W3School"&gt;</p><p>&lt;/a&gt;</p><p>&lt;/body&gt;</p><p>&lt;/html&gt;</p><p><em><strong>根据</strong></em><a href="http://www.w3school.com.cn/tags/att_a_download.asp"><em><strong>http://www.w3school.com.cn/tags/att_a_download.asp</strong></em></a><em><strong>的解释,因为用了"<span>download="w3logo",所以</span>下载的文件的文件名应该是用<span>download定义的文件名</span><span>w3logo.png,而不是原始图片文件名,但是实际下载却还是<span>原始图片文件名.不知道怎么回事,请各位大虾指点,谢谢!</span></span></strong></em></p>
+                </div>
+                <div class="wenda-question-content-info"><span>提问者:</span>cloudgalaxy</div>
+            </div>
+            <div class="wenda-content-answer">
+                <h3>2 回答</h3>
+                <ul id="js-answer-content">
+                    <li>
+                        <div class="wenda-answer-avatar fl"><img src="../images/avatar.png" height="40" width="40 "/> </div>
+
+                        <div class="wenda-answer-content fr">
+                            <div class="wenda-answer-inner">
+                                一般是在服务器里设置返回头信息来修改下载文件名的。<br />
+                                这个download属性确实不好用。要在服务器上，而且下载的图片不是跨域名时，才能指定文件名。
+                            </div>
+                            <div class="wenda-answer-info"><span>回答者:qq_青枣工作室_0</span><span>时间: 1天前</span> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wenda-answer-avatar fl"><img src="../images/avatar.png" height="40" width="40 "/> </div>
+
+                        <div class="wenda-answer-content fr">
+                            <div class="wenda-answer-inner">
+                                你应该是直接打开html文件测试的吧<br />
+                                这个属性需要在服务器环境测试<br />
+                                你google下怎么搭建本地静态服务器就可以了
+                            </div>
+                            <div class="wenda-answer-info"><span>回答者:LLeo小浩</span><span>时间: 1天前</span> </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="wenda-question-form" id="qa-submit">
+                <form id="qa-form-answer">
+                    <h2>我要回答</h2>
+                    <textarea class="qa-submit-content qa-submit-answer-content" title="描述你的问题" id="qa-submit-content"></textarea>
+                    <input type="submit" class="qa-submit-btn fr" id="qa-submit-answer" value="提交"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-left fl">
+            <p><a href="../subject.html">课程资源</a>|<a href="../news.html">每日一闻</a>|<a href="mailto:admin@52admin.net">联系我们</a>|<a href="http://www.confusay.com" target="_blank">子曰工作室</a> </p>
+            <p>Copyright © 2016 Confusay. All Rights Reserved</p>
+        </div>
+        <div class="footer-right fr">
+            <img src="../images/confusay_foot.png" height="100" width="100" class="confusay-team" />
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="backtop"></div>
+</body>
+</html>
